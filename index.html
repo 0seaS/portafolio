@@ -3,104 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/nav.css">
+    <script src="./assets/js/scrip.js" type="module" defer></script>
     <title>Portafolio</title>
 </head>
 <body>
-    <header>
-        <ul>
-            <li>About</li>
-            <li>Resume</li>
-            <li>Projects</li>
-            <li>Contact</li>
-        </ul>
+    <header class="nav__container">
+        <nav>
+            <ul class="nav__ul">
+                <li class="nav__element" id="idAbout">Home</li>
+                <li class="nav__element" id="idResume">Resume</li>
+                <li class="nav__element" id="idProjects">Projects</li>
+                <li class="nav__element" id="idContact">Contact</li>
+            </ul>
+        </nav>
+
     </header>
-    <main>
-        <article>
-            <h2>About</h2>
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus esse nemo pariatur optio, ab nam, libero non obcaecati tenetur unde doloribus repellendus quo eius odit, eaque iste quia quos totam.</p>
-            </div>
-        </article>
-        <article>
-            <h2>Resume</h2>
-            <div>
-                <section>
-                    <h3>Professional profile </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos earum, saepe id velit voluptates tempore ad voluptatum, quia minima quod debitis, vitae dignissimos maxime itaque! Unde quidem quod tenetur quos.</p>
-                </section>
-                <section>
-                    <h3>Core skills</h3>
-                    <ul>
-                        <li>html</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>React</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Education</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Career summary</h3>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempore repellat, quisquam sit a enim consequatur, incidunt perspiciatis, suscipit recusandae quidem distinctio? Reiciendis modi eaque natus rerum ducimus ratione voluptatem!
-                    </p>
-                </section>
-            </div>
-        </article>
-        <article>
-            <h2>Projects</h2>
-            <div>
-                <div>
-                    <h3>Fortune Cookie</h3>
-                    <div>
-                        <img src="" alt="">
-                        <div>
-                            <span><a href="http://" target="_blank" rel="noopener noreferrer">View Web Site</a></span>
-                            <span><a href="http://" target="_blank" rel="noopener noreferrer">View Code</a></span>
+
+    <main class="main">
+        <div class="main__container">
+            <article class="content__card content__home content__show">
+                <h2 class="card__title">Hi, I am Josue</h2>
+                <h3 class="card__title">Front end developer</h3>
+                <div class="card__body">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus esse nemo pariatur optio, ab nam, libero non obcaecati tenetur unde doloribus repellendus quo eius odit, eaque iste quia quos totam.</p>
+                </div>
+            </article>
+            <article class="content__card content__resume">
+                <h2 class="card__title">Resume</h2>
+                <div class="card__body">
+                    <section>
+                        <h3>Professional profile </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos earum, saepe id velit voluptates tempore ad voluptatum, quia minima quod debitis, vitae dignissimos maxime itaque! Unde quidem quod tenetur quos.</p>
+                    </section>
+                    <section>
+                        <h3>Core skills</h3>
+                        <ul>
+                            <li>html</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>React</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Education</h3>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Career summary</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempore repellat, quisquam sit a enim consequatur, incidunt perspiciatis, suscipit recusandae quidem distinctio? Reiciendis modi eaque natus rerum ducimus ratione voluptatem!
+                        </p>
+                    </section>
+                </div>
+            </article>
+            <article class="content__card content__projects">
+                <h2 class="card__title">Projects</h2>
+                <div class="card__body card__body-projects">
+                    <div class="project__card fortuneBg">
+                        <h3 class="project__card-title">Fortune Cookie</h3>
+                        <div class="project__card-body">
+                            
+                            
+                                <span><a href="http://" target="_blank" rel="noopener noreferrer">View Web Site</a></span>
+                                <span><a href="http://" target="_blank" rel="noopener noreferrer">View Code</a></span>
+                            
+                        </div>
+                    </div>
+                    <div class="project__card weatherBg">
+                        <h3 class="project__card-title">Weather App</h3>
+                        <div class="project__card-body">
+                        
+                            
+                                <span><a href="http://" target="_blank" rel="noopener noreferrer">View Web Site</a></span>
+                                <span><a href="http://" target="_blank" rel="noopener noreferrer">View Code</a></span>
+                            
+                        </div>
+                    </div>
+                    <div class="project__card rickBg">
+                        <h3 class="project__card-title">Rick and Morty</h3>
+                        <div class="project__card-body">
+                            
+                                <span><a href="http://" target="_blank" rel="noopener noreferrer">View Web Site</a></span>
+                                <span><a href="http://" target="_blank" rel="noopener noreferrer">View Code</a></span>
+                        
+                        </div>
+                    </div>
+                    <div class="project__card pokeBg">
+                        <h3 class="project__card-title">Users App</h3>
+                        <div class="project__card-body">
+                            
+                                <span><a href="http://" target="_blank" rel="noopener noreferrer">View Web Site</a></span>
+                                <span><a href="http://" target="_blank" rel="noopener noreferrer">View Code</a></span>
+                        
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h3>Weather App</h3>
-                    <div>
-                        <img src="" alt="">
-                        <div>
-                            <span><a href="http://" target="_blank" rel="noopener noreferrer">View Web Site</a></span>
-                            <span><a href="http://" target="_blank" rel="noopener noreferrer">View Code</a></span>
-                        </div>
-                    </div>
+            </article>
+            <article class="content__card content__contact">
+                <h2 class="card__title">Contact</h2>
+                <div class="card__body">
+
                 </div>
-                <div>
-                    <h3>Rick and Morty</h3>
-                    <div>
-                        <img src="" alt="">
-                        <div>
-                            <span><a href="http://" target="_blank" rel="noopener noreferrer">View Web Site</a></span>
-                            <span><a href="http://" target="_blank" rel="noopener noreferrer">View Code</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3>Users App</h3>
-                    <div>
-                        <img src="" alt="">
-                        <div>
-                            <span><a href="http://" target="_blank" rel="noopener noreferrer">View Web Site</a></span>
-                            <span><a href="http://" target="_blank" rel="noopener noreferrer">View Code</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <article>
-            <h2>Contact</h2>
-        </article>
+            </article>
+        </div>
     </main>
+    <footer>
+      Image by <a href="https://www.freepik.com/free-vector/colorful-abstract-background_7088566.htm?query=website%20background#from_view=detail_alsolike">Freepik</a>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Ysabeau+SC:wght@300;500;700&display=swap');
+
+:root{
+    /**** MAIN COLOR ****/
+    --main-color: #ccc;
+    --main-color-dark: white;
+    --main-color-light: #c6bef3;
+
+    /**** BACKGROUND COLOR ****/
+    --bg-color: #4D4D4D;
+    --bg-color-dark: #000000;
+    --bg-color-light: #363535b9;
+
+    --margin-small: 0.5em;
+    --margin-medium: 1em;
+    --margin-big: 1.5em;
+
+}
+
+/**** RESET ****/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url(/assets/img/backGround.jpg);
+    background-position: center center;
+    color: var(--main-color);
+    font-family: 'Ysabeau SC', sans-serif;
+    transition: background-position .7s ease;
+}
+
+.bgPos1{
+    background-position: left center;
+}
+
+.bgPos2{
+    background-position: right center;
+}
+
+.bgPos3{
+    background-position: center top;
+}
+
+.bgPos4{
+    background-position: center bottom;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/***** HEADER *****/
+.nav__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--bg-color-light);
+    width: 350px;
+    height: 40px;
+    font-size: 25px;
+    box-shadow: 1px 1px 5px var(--main-color-light);
+    border-radius: 0px 0px 7px 7px;
+    font-family: 'VT323', monospace;
+    z-index: 10;
+}
+
+nav{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav__ul{
+    padding: auto 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav__element{
+    text-shadow: 1px 1px 2px var(--bg-color-dark);
+}
+
+.nav__element:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    color: var(--main-color-dark);
+}
+
+/**** MAIN ****/
+.main{
+    background-color: var(--bg-color-light);
+    margin: 6em auto 5em;
+    max-width: 750px;
+    border-radius: 2em;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgb(63, 76, 196);
+}
+
+.main__container{
+   
+    position: relative;
+    top: 1.5em;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 80%;
+    height: 450px;
+  
+}
+
+.content__card{
+    width: 100%;
+    max-width: 700px;
+    position: absolute;
+    transition: left 1000ms ease-in-out, top 1000ms ease-in-out;
+}
+
+.card__title{
+    color: white;
+    margin-bottom: 1.5em;
+}
+
+.content__home{
+    top: -1000px;
+}
+.content__projects{
+    left: 1000px;
+}
+
+.content__resume{
+    left: -1000px;
+}
+
+.content__contact{
+    top: 1000px;
+}
+
+.content__show{
+    left: 0;
+    top: 0;
+}
+
+/**** BODY ****/
+
+
+/**** PROJECTS ****/
+
+.card__body-projects{
+    margin: 0 auto;
+    display: flex;
+    height: 270px;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.project__card{
+    background-size: cover;
+    background-position: center center;
+    width: 0;
+    flex-grow: 1;
+    filter: brightness(70%);
+    transition: 0.7s ease;
+    text-align: center;
+}
+
+.fortuneBg{
+    background-image: url('/assets/img/galletaFortuna.png');
+}
+
+.weatherBg{
+    background-image: url('/assets/img/weather.png');
+}
+
+.rickBg{
+    background-image: url('/assets/img/rickAndMorty.png');
+}
+
+.pokeBg{
+    background-image: url('/assets/img/poekdex.png');
+}
+
+.project__card:hover{
+    width: 50%;
+    opacity: 1;
+    filter: brightness(100%);
+}
+
+.project__card:hover .project__card-body{
+    opacity: 1;
+}
+
+.project__card-title{
+    color: white;
+    margin-top: 2em;
+    padding: .1em;
+    background: #888888d3;
+}
+
+.project__card-body{
+    margin: 3em 1em ;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: #ccccccc0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
