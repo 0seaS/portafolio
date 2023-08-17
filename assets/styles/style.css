@@ -26,8 +26,10 @@
 
 
 body{
-    background-image: url(/assets/img/backGround.jpg);
-    background-position: center center;
+    background-image: url(/assets/img/planetFont.jpeg), linear-gradient(black, white);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 2500px;
     color: var(--main-color);
     font-family: 'Ysabeau SC', sans-serif;
     transition: background-position .7s ease;
@@ -51,10 +53,15 @@ body{
 
 a{
     text-decoration: none;
+    color: #000000;
+    font-size: 1.2em;
 }
 
 ul{
     list-style-type: none;
+}
+p{
+    margin-bottom: 1rem;
 }
 
 /***** HEADER *****/
@@ -63,9 +70,10 @@ ul{
     top: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: 0 auto;
     background-color: var(--bg-color-light);
-    width: 350px;
+    max-width: 90%;
+    width: 450px;
     height: 40px;
     font-size: 25px;
     box-shadow: 1px 1px 5px var(--main-color-light);
@@ -92,6 +100,10 @@ nav{
     text-shadow: 1px 1px 2px var(--bg-color-dark);
 }
 
+.nav__element-selected{
+    color: var(--main-color-dark);
+}
+
 .nav__element:hover{
     cursor: pointer;
     transform: scale(1.2);
@@ -101,8 +113,9 @@ nav{
 /**** MAIN ****/
 .main{
     background-color: var(--bg-color-light);
-    margin: 6em auto 5em;
-    max-width: 750px;
+    margin: 4.5em auto 1em;
+    max-width: 85%;
+    width: 750px;
     border-radius: 2em;
     overflow: hidden;
     box-shadow: 1px 1px 5px rgb(63, 76, 196);
@@ -115,7 +128,7 @@ nav{
     margin: 0 auto;
     max-width: 900px;
     width: 80%;
-    height: 450px;
+    height: 550px;
   
 }
 
@@ -124,6 +137,14 @@ nav{
     max-width: 700px;
     position: absolute;
     transition: left 1000ms ease-in-out, top 1000ms ease-in-out;
+}
+
+.card__body h3{
+    color: var(--main-color-dark);
+}
+
+.card__body>section>p>a{
+    color: var(--main-color-dark);
 }
 
 .card__title{
@@ -152,7 +173,26 @@ nav{
 }
 
 /**** BODY ****/
+/**** Resume ****/
 
+.resume__skills{
+    margin-top: 1em;
+}
+.resume__skills>ul{
+    margin-top: 1em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.resume__skills img{
+    width: 75px;
+    height: 75px;
+    display: block;
+    filter: drop-shadow(0 1px 5px white);
+}
 
 /**** PROJECTS ****/
 
@@ -161,6 +201,7 @@ nav{
     display: flex;
     height: 270px;
     border-radius: 1em;
+    box-shadow: 2px 2px 7px white;
     overflow: hidden;
 }
 
@@ -169,7 +210,7 @@ nav{
     background-position: center center;
     width: 0;
     flex-grow: 1;
-    filter: brightness(70%);
+    filter: brightness(85%);
     transition: 0.7s ease;
     text-align: center;
 }
@@ -200,6 +241,10 @@ nav{
     opacity: 1;
 }
 
+.project__card:hover .project__card-bodyDescription{
+    opacity: 1;
+}
+
 .project__card-title{
     color: white;
     margin-top: 2em;
@@ -207,8 +252,19 @@ nav{
     background: #888888d3;
 }
 
+.project__card-bodyDescription{
+    margin: 3rem 1rem 0;
+    padding-top: 1rem;
+    height: 4rem;
+    background: #ccccccc0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: rgb(0, 0, 0);
+    font-size: 0.8em;
+}
+
 .project__card-body{
-    margin: 3em 1em ;
+    margin: 0 1rem 1rem ;
     padding-top: 1em;
     padding-bottom: 1em;
     display: flex;
@@ -219,3 +275,37 @@ nav{
     transition: opacity 0.4s ease;
 }
 
+.project__card-body span{
+    padding: 0 0.5em;
+    background: #aca4a470
+}
+
+.project__card-body span:hover{
+    color: white;
+}
+
+.contact__list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.contact__list > li{
+    text-align: center;
+    margin-top: 1.5em;
+    transition: scale 0.4s ease;
+    text-shadow: 1px 1px 5px white;
+}
+
+.contact__list > li:hover{
+    scale: 1.2;
+}
+
+.content__contact img{
+    margin: 0 0.5em;
+    width: 75px;
+    height: 75px;
+    display: block;
+    filter: drop-shadow(2px 2px 7px white);
+}

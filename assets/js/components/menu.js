@@ -11,41 +11,48 @@ function showMenu(){
     const resume = document.querySelector('.content__resume')
     const contact = document.querySelector('.content__contact')
     
+    const clearSelected = () => {
+        projects.classList.remove('content__show')
+        home.classList.remove('content__show')
+        contact.classList.remove('content__show')
+        resume.classList.remove('content__show')
+
+        nHome.classList.remove('nav__element-selected')
+        nResume.classList.remove('nav__element-selected')
+        nProjects.classList.remove('nav__element-selected')
+        nContact.classList.remove('nav__element-selected')
+    }
 
     nHome.addEventListener('click', function () {
+        clearSelected()
         home.classList.add('content__show')
-        projects.classList.remove('content__show')
-        resume.classList.remove('content__show')
-        contact.classList.remove('content__show')
 
+        nHome.classList.add('nav__element-selected')
         body.style.backgroundPosition = 'left top'
     })
 
     nResume.addEventListener('click', function () {
+        clearSelected()
         resume.classList.add('content__show')
-        projects.classList.remove('content__show')
-        home.classList.remove('content__show')
-        contact.classList.remove('content__show')
 
-        body.style.backgroundPosition = 'left bottom'
+        nResume.classList.add('nav__element-selected')
+        body.style.backgroundPosition = 'left 80%'
     })
 
     nProjects.addEventListener('click', function () {
+        clearSelected()
         projects.classList.add('content__show')
-        resume.classList.remove('content__show')
-        home.classList.remove('content__show')
-        contact.classList.remove('content__show')
 
+        nProjects.classList.add('nav__element-selected')
         body.style.backgroundPosition = 'right top'
     })
 
     nContact.addEventListener('click', function () {
+        clearSelected()
         contact.classList.add('content__show')
-        resume.classList.remove('content__show')
-        home.classList.remove('content__show')
-        projects.classList.remove('content__show')
 
-        body.style.backgroundPosition = 'right bottom'
+        nContact.classList.add('nav__element-selected')
+        body.style.backgroundPosition = 'right 80%'
     })
 
 }
